@@ -10,34 +10,36 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 
 body {
-    background-color: #111D4A;
+    background: linear-gradient(90deg, rgba(89,189,246,1) 14%, rgba(65,135,188,1) 36%, rgba(39,78,127,1) 56%, rgba(23,42,88,1) 76%, rgba(17,29,74,1) 90%);
     display: grid;
     height: 100vh;
     width: 100vw;
     grid-template-columns:70% 1fr;
-    grid-template-rows:25% 1fr 10% ;
-
+    grid-template-rows:22% 1fr 10%;
     grid-template-areas:
     "header header header"
-    "main main aside"
-    "footer footer footer"
-    ;
+    "main main main"
+    "footer footer footer"  ;
 }
 
 header { grid-area:header ;
     align-items: center;
-    background-color: #C2CAE8;
+    background: rgb(89,189,246);
+    background: linear-gradient(90deg, rgba(89,189,246,1) 14%, rgba(65,135,188,1) 36%, rgba(39,78,127,1) 56%, rgba(23,42,88,1) 76%, rgba(17,29,74,1) 90%);
     display: flex;
     justify-content: space-around;
     width: 100%;
     
 
 }
-
+.dropdown{
+ display: none;
+}
 h1 {
     color: #111D4A;
     font-size: 4rem;
@@ -73,50 +75,62 @@ a{
 }
 
 
-main{
-    display: flex;
+main{background: rgb(89,189,246);
+    background: linear-gradient(90deg, rgba(89,189,246,1) 14%, rgba(65,135,188,1) 36%, rgba(39,78,127,1) 56%, rgba(23,42,88,1) 76%, rgba(17,29,74,1) 90%);
 grid-area: main;
 justify-content: center;
 align-items: center;
 }
-
+main{
+     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "main aside"; 
+}
 
 .imagen-santi {
    box-sizing: border-box;
+   border-radius: 10%;
+   height: 90%;
+   width: 90%;
+   margin:3rem 2rem;
    
 }
 
-aside{display: flex;
-    grid-area: aside;
-    align-items: center;
+.aside{grid-area: aside;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
 }
 .texto1 {
-    background-color:gray;
+    background-color: #FCECC9;
     font-size: medium;
-    color: white;
-height: 90%;
-width: 90%;
+    color: #111D4A;
+height: 20%;
+width: 80%;
 box-sizing: border-box;
 padding: 1rem;
-border: white solid 1px;
 font-family: 'Dongle', sans-serif;
 
-   
+
+
 }
 .parrafos{
     font-family: 'Caveat', cursive;
-    margin-top:20rem;
+    margin-top:10rem;
     
     
    
 }
 
-footer {grid-area: footer;
+footer {
+    grid-area: footer;
     display: flex;
-    background-color:#134074 ;
-    width: 100%;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #134074;
 }
 .logo-ig{
     width: 4rem;
@@ -138,30 +152,32 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    margin: 1rem 0;
 
+  }
+ 
 .titulos-profes{
     grid-area: titulos;
-    margin-top: 0.5rem;
+    margin-top:;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   gap: 1rem;
+
 }
 
-.titulo-profes{
-    
-    justify-content: center;
-
+    .titulo-profes{
     font-family: 'Oswald', sans-serif;
-    color: #C2CAE8;
+   color: #111D4A;
     font-size:x-large;
     font-weight: bolder;
 }
 
 .subtitulo-profes{ font-size:large;
-    width: 80%;
-    background-color:gray ;
-    margin-top: 2rem;
-    color: white;
-    border: 2px solid white;
-    justify-content: center;
+    width: 40%;
+    background-color:#FCECC9 ;
+    color: #134074;
 }
 
 
@@ -183,49 +199,62 @@ align-items: center;
 /* Horarios */
 
 .main-horarios{
-color: whitesmoke;
+color: #111D4A;
 display: grid;
-width:100vw ;
-height: 100vh;
-grid-template-columns:65% 1fr;
+width: 100%;
+height: 100%;
+grid-template-columns:60% 1fr;
 grid-template-rows: 20% 1fr;
 grid-template-areas:
-" titulo aside"
+"titulo aside"
 "turnos aside";
 }
 .titulo-horarios{
-    color:#C2CAE8;
+    color:#111D4A;
     grid-area: titulo;
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.loshorarios{color: white;
-    background-color: gray;
-    border: solid 1px white;
+.contenedor-horarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.loshorarios{color: #111D4A;
+    background-color: #FCECC9;
 font-family: 'Caveat', cursive;
 width:70% ;
+font-size: large;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
-.turnos{ color: #C2CAE8;
+.turnos{ color: #111D4A;
     grid-area: turnos ;
     font-size: x-large;
     height: 90%;
 
-    
+
+}
+.contenedor-turnos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .losturnos{
-    color: white;
-    background-color: gray;
-    border: solid 1px white;
+    color: #111D4A;
+    background-color: #FCECC9;
     font-family: 'Caveat', cursive;
     width:90% ;
     font-size:large;
 
 }
+
 .foto-aside{
     grid-area: aside;
 }
 .foto-aside img{
-    width: 100%;
+    width: 90%;
     height:80%;
 }
 /* FIN DE HORARIOS */
@@ -233,62 +262,63 @@ width:70% ;
 
 .main-acerca{
     display: grid;
-    height: 150vh;
-    width:100vw;
+    height: 100%;
+    width:100%;
     grid-template-columns:60% 1fr ;
-    grid-template-rows: 5% 50% 1fr;
+    grid-template-rows: 5%1fr;
     grid-template-areas:
-    " reglamento imagen"
-    "presentacion imagen "
-    "video orden ";
+    " reglamento reglamento"
+    "presentacion orden ";
 }
 
 .reglamento{ text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:#C2CAE8;
+    color:#FCECC9;
     font-size: xx-large;
     grid-area: reglamento;
 }
-.video{
-    grid-area: video;
-    width: 90%;
-    height: 90%;
-    background-color: #134074;
-    
-}
+
 .presentacion{ 
     grid-area: presentacion;
-    color: white;
-    background-color: gray;
-    border: solid 1px white;
+    color: #111D4A;
+    background-color:#FCECC9;
     font-family: 'Caveat', cursive;
    width: 90%;
     font-size: medium;
+    padding: 1rem;
+    border-radius:5%;
+}
+.span-presentacion{
+    font-size: x-large;
+    font-weight: bold;
+}
+.contenedor-presentacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .orden{
     grid-area: orden;
-    color: white;
-    background-color: gray;
-    border: solid 1px white;
+    color: #FCECC9;
     font-family: 'Caveat', cursive;
-   width: 90%;
+   width: 80%;
    font-size: medium;
 }
-
-
-.imagen-acerca{ grid-area: imagen;
-    width: 90%;
-    height: 80%;
-    
-    margin-bottom: 10rem;
-   
+.span-orden{
+    font-size: x-large;
+    font-weight: bold;
 }
+
+
+
+/* FIN DE ACERCA DE */
+/* CONTACTOS */
 .main-contactos{
     display: grid;
     height: 100%;
     width: 100%;
     grid-template-columns: 30% 1fr 1fr ;
-    grid-template-rows:3rem 1fr;
+    grid-template-rows:5% 1fr;
     grid-template-areas: 
     "maps contacto info"
     "maps form info";
@@ -296,62 +326,84 @@ width:70% ;
 .maps{ font-size: large;
     font-family: 'Caveat', cursive;
     grid-area: maps;
-    width: 70%;
+    width: 100%;
 height:50% ;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+justify-content: center;
+
 
 }
 .maps p{display: flex;
-
     font-size: x-large;
     font-family: 'Caveat', cursive;
-    margin-bottom: 3rem;
-    color: #C2CAE8;
+    
+    color: #111D4A;
 
+}
+.titulo-contacto{
+    display: none;
+}
+.section-formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: form;
 }
 
 
 .form-contacto{ display: flex;
-    justify-content: start;
+
     grid-area: contacto;
-    color: #C2CAE8;
+    color: #FCECC9;
     font-size: xx-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
     
 }
 .form{display: flex;
     flex-direction: column; 
-    grid-area: form;
-    background-color: gray;
+    
+    background-color: #111D4A;
     color: white;
     font-size: medium;
     font-family: 'Caveat', cursive;
     height:90%;
     width: 70%;
-    border: solid 1px white;
+    border-radius: 5%;
 padding: 0.7rem;
 }
 
-
 .info-contacto{display: flex;
-    color: white;
+    color: #FCECC9;
     margin-left: 5rem;
-    pad: 1rem;
+    gap: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size:large;
     width: 60%;
-    height: 50%;
+    height: 100%;
     grid-area: info;
-    background-color: gray;
     font-family: 'Caveat', cursive;
+}
+.ig-contacto{
+    color: #FCECC9;
+}
+.titulo-info-contacto{
+    font-size: x-large;
+    font-weight: bold;
 }
 
 
 
 @media screen and (max-width: 425px) {
 
-  
+body{
+   grid-template-columns: none;
+}
     header{
         justify-content: space-around;
         align-items: center;
@@ -360,7 +412,12 @@ padding: 0.7rem;
         
     
     }
+    .dropdown{
+        display: block;
+    }
    h1{font-size: medium;
+    color: white;
+    font-weight: bold;
 
    }
     nav{
@@ -375,25 +432,28 @@ padding: 0.7rem;
 .imagen-logo{ width: 8rem;
    
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+}
 .imagen-santi{
-    width:70%;
+    width:85%;
 }
 aside{
 height: 100%;
-background-color: #111D4A;
 }
 .texto1{
 font-size:xx-small;
-background-color: gray;
-background-size: auto;
+background-color: #FCECC9;
+height: 90%;
 
 }
 .parrafos{
     margin-top: 0;
-    font-size:x-small;
+    font-size:small;
 }
-s
+
+
 /* section profes */
 
 .main-profes{
@@ -403,10 +463,15 @@ height: 90%;
 display: flex;
 }
 .titulo-profes{
-    font-size: medium
+    font-size: medium;
+    color:white;
+    font-weight: bolder;
 }
 .subtitulo-profes{
     font-size: medium;
+    width: 80%;
+    font-weight: 600;
+    padding: 0.5rem;
 }
 
 
@@ -415,6 +480,7 @@ display: flex;
     width: 80%;
     justify-content: center;
     align-items: center;
+    margin-left: 4rem;
 
 }
 .carousel-inner h5{
@@ -439,6 +505,9 @@ height: 100%;
     font-size: medium;
 
 }
+.losturnos{
+    font-size: small;
+}
 .foto-aside{
     display: none;
 }
@@ -449,44 +518,63 @@ height: 100%;
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 1rem;
 }
 .reglamento{
-    font-size: medium;
+    font-size: x-large;
+    font-weight: bolder;
 }
 .presentacion{
     font-size: small;
+    background-image: url(../img/foto\ para\ fondo\ mobile.png);
+   color: white;
+   font-weight: bold;
+   background-size: cover;
+   
+
 }
 .imagen-acerca{
-    width: 30%;
-    height: 30%;
-   margin-left: 25rem;
-   margin-bottom: 1rem;
-   margin-top: 1rem;
+    display: none;
 }
 .orden{
     font-size: small;
 }
+.video{
+    display: none;
+}
 
 /* contacto */
+.titulo-contacto{
+    display: block;
+    color: #FCECC9;
+    font-size: x-large;
+    grid-area: contacto;
+    
+}
 
 .main-contactos{
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     display: grid;
-    grid-template-columns:20% 1fr ;
-    grid-template-rows: 30% 1fr 30%;
+    grid-template-columns: 1fr ;
+    grid-template-rows:2% 30% 1fr 25%;
     grid-template-areas: 
-    "contacto maps"
-    "form form"
-    "none info";
+    "contacto"
+    " maps"
+    " form"
+    " info"; 
 }
 
 .maps{
     grid-area: maps;
     display: flex;
+    flex-direction: row;
+   
+    justify-content:space-evenly ;
     
 }
 .maps p{font-size: medium;
-    justify-content:end;
+    justify-content:center;
     align-items: start;
     
 }
@@ -496,20 +584,26 @@ iframe{
     
 }
 .form-contacto{
-
-    font-size: large;
-    
+display: none;
 }
 
+.section-formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .form{
-    height:90% ;
+    height:100% ;
     width: 60%;
-    font-size: small;
+    font-size:medium;
+    
 }
 .info-contacto{
     font-size: medium;
     width: 70%;
     justify-content: center;
+height: 50%;
+gap: 0;
 }
 }
 

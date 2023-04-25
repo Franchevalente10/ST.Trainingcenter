@@ -161,7 +161,6 @@ footer {
  
 .titulos-profes{
     grid-area: titulos;
-    margin-top:;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -589,8 +588,8 @@ height: 100%;
     
 }
 iframe{
-    height: 12rem;
-    width: 80%;
+    height: 80%;
+    width: 50%;
     
 }
 .form-contacto{
@@ -812,8 +811,8 @@ font-family: 'Times New Roman', Times, serif;
         
     }
     iframe{
-        height: 10rem;
-        width: 18rem;
+        height:80%;
+        width: 50%;
         
     }
     .form-contacto{

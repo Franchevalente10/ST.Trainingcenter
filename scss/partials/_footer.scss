@@ -3,10 +3,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(89,189,246);
-    background:$background ;
+background-color: rgb(79, 79, 79);
+    gap: 4rem;
     
     .logo-ig{
+        width: 4rem;
+    }
+    .logo-wsp{
         width: 4rem;
     }
 }

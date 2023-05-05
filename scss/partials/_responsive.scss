@@ -7,11 +7,11 @@
     header {
         justify-content: space-evenly;
         align-items: center;
-        width: 100vw;
-        height: 80%;
+        width: 100%;
+    
         h1 {
             font-size: medium;
-            color: white;
+            color: black;
             font-weight: bold;
 
         }
@@ -28,28 +28,60 @@
     }
 
     main {
-        display: flex;
-        flex-direction: column;
-
-      
+        grid-template-columns: 1fr;
+        grid-template-rows: 25% 20% 1fr;
+        grid-template-areas: 
+        "imagen"
+        "texto"
+        "entrenamiento";
+        
+        .contenedor-imagen-santi{
+            display: flex;
+            justify-content: center;
         .imagen-santi {
-            width: 85%;
+            width: 60%;
+            grid-area: imagen;
         }
-      
-        aside {
-            height: 100%;
-          
+    }
+        .aside {
+            grid-area: texto;
+            height: 80%;
             .texto1 {
+                font-family: 'Ubuntu', sans-serif;
                 font-size: xx-small;
-                background-color: #FCECC9;
-                height: 90%;
+                height: 40%;
                 .parrafos {
                     margin-top: 0;
                     font-size: small;
                     font-family: 'Times New Roman', Times, serif;
                 }
             }
-            
+        }
+        .entrenamiento{
+            gap: 1rem;
+            padding: 0.5rem;
+            grid-area: entrenamiento;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 100%;
+        .training{
+            width: 100%;
+            font-size: small;
+            font-family: 'Sigmar', cursive;
+        }
+        
+            .act-fisica{gap: 0.5rem;
+                width: 100%;
+                h3{font-family: 'Caveat', cursive;
+                    font-size: small;
+                }
+                p{font-family: 'Ubuntu', sans-serif;
+                    font-weight: 600;
+                    font-size: small;
+                
+                }
+            }
         }
     }
 
@@ -84,7 +116,13 @@
             width: 80%;
             justify-content: center;
             align-items: center;
-
+.carousel-inner{
+    .carousel-item{
+        img{
+            width: 100%;
+        }
+    }
+}
             h5 {
                 font-size: small;
             }
@@ -107,8 +145,11 @@
         .contenedor-horarios {
            
             .titulo-horarios {
+             h2{
                 font-size:large;
-                font-weight: bold;
+                font-weight: 600;
+                
+             }
             }
 
             .loshorarios {

@@ -1,0 +1,12 @@
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(89,189,246);
+    background:$background ;
+    
+    .logo-ig{
+        width: 4rem;
+    }
+}

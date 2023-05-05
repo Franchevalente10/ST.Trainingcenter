@@ -1,0 +1,332 @@
+
+//main inicio
+
+main{
+    background-color: $background;
+grid-area: main;
+justify-content: center;
+align-items: center;
+     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "main aside"; 
+
+    .imagen-santi {
+        box-sizing: border-box;
+        border-radius: 10%;
+        height: 90%;
+        width: 90%;
+        margin:3rem 2rem;
+     }
+     .aside {
+        grid-area: aside;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    
+        .texto1 {
+            background-color: #FCECC9;
+            font-size: x-large;
+            color: #111D4A;
+        height: 20%;
+        width: 80%;
+        box-sizing: border-box;
+        padding: 1rem;
+        .parrafos{
+        font-size: medium;
+            margin-top:10rem;
+         font-family: 'Ubuntu', sans-serif;
+        font-weight: 600;
+        }
+        }
+        
+    }
+
+}
+
+
+
+
+
+//main de profes
+
+.main-profes{ display: grid;
+    grid-template-rows: 13rem 1fr;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "titulos"
+    "carousel"   ;
+
+    .titulos-profes{
+        grid-area: titulos;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       gap: 1rem;
+
+       .titulo-profes{
+        font-family: 'Ubuntu', sans-serif;
+       color: #111D4A;
+        font-size:x-large;
+        font-weight: bolder;
+    }
+    
+    .subtitulo-profes{ font-size:large;
+        width: 40%;
+        background-color:#FCECC9 ;
+        color: #134074;
+        padding:1rem;
+    
+    }
+    }
+
+    .contenedor-carousel{
+        display: flex;
+         justify-content: center;
+         align-items: center;
+        margin: 1rem 0;
+        grid-area: carousel;
+    
+
+      .carousel{
+        
+        p{
+            color: white;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        h5{
+            color: white;
+            font-weight: bolder;
+            font-size: medium;
+        }
+
+    }
+    
+}
+}
+
+
+//main horarios
+.main-horarios{
+    color: #111D4A;
+    display: grid;
+    width: 100%;
+    grid-template-columns:60% 1fr;
+    grid-template-rows: 20% 1fr;
+    grid-template-areas:
+    "titulo aside"
+    "turnos aside";
+
+    .contenedor-horarios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .titulo-horarios{
+            color:#111D4A;
+            grid-area: titulo;
+            font-size: large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .loshorarios{
+        color: #111D4A;
+        background-color: #FCECC9;
+        width:65% ;
+        font-size: large;
+        font-family: 'Caveat', cursive;
+        padding: 1rem;
+        }
+    }
+
+
+.contenedor-turnos{
+    .turnos{ color: #111D4A;
+        grid-area: turnos ;
+        font-size: x-large;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .losturnos{
+        color: #111D4A;
+        background-color: #FCECC9;
+        font-family: 'Caveat', cursive;
+        width:80% ;
+        font-size:large;
+        padding: 0.5rem;
+    }
+
+}
+.foto-aside{
+    grid-area: aside;
+    img{
+        width: 90%;
+        height:80%;
+    }
+}
+
+    }
+
+    // main acerca de
+
+    .main-acerca{
+        display: grid;
+        height: 100%;
+        width:100%;
+        grid-template-columns:60% 1fr ;
+        grid-template-rows: 5% 1fr;
+        grid-template-areas:
+        " reglamento reglamento"
+        "presentacion orden ";
+
+        .reglamento{ text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:#FCECC9;
+            font-size: xx-large;
+            grid-area: reglamento;
+        }
+
+        .contenedor-presentacion{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+    
+        .presentacion{ 
+            grid-area: presentacion;
+            color: #111D4A;
+            background-color:#FCECC9;
+            font-family: 'Caveat', cursive;
+           width: 90%;
+            font-size: medium;
+            padding: 1rem;
+            border-radius:5%;
+
+            .span-presentacion{
+                font-size: x-large;
+                font-weight: bold;
+            }
+        }
+    }
+    
+        .orden{
+            grid-area: orden;
+            color: #FCECC9;
+            font-family: 'Caveat', cursive;
+           width: 80%;
+           font-size: medium;
+
+           .span-orden{
+            font-size: x-large;
+            font-weight: bold;
+        }
+        
+        }
+    }
+    
+
+    
+// main contacto
+
+.main-contactos{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 30% 1fr 1fr ;
+    grid-template-rows:5% 1fr;
+    grid-template-areas: 
+    "maps contacto info"
+    "maps form info";
+
+    .titulo-contacto{
+        display: none;
+    }
+
+    .maps{ font-size: large;
+        font-family: 'Caveat', cursive;
+        grid-area: maps;
+        width: 100%;
+    height:50% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: center;
+    
+    p{display: flex;
+        font-size: x-large;
+        font-family: 'Caveat', cursive;
+        
+        color: #111D4A;
+    
+    }
+    .form-contacto{ display: flex;
+        grid-area: contacto;
+        color: #FCECC9;
+        font-size: xx-large;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        
+    }
+    }
+
+    .section-formulario{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: form;
+
+        .form{display: flex;
+            flex-direction: column; 
+            background-color: #111D4A;
+            color: white;
+            font-size: medium;
+            font-family: 'Caveat', cursive;
+            height:90%;
+            width: 70%;
+            border-radius: 5%;
+        padding: 0.7rem;
+        }
+    }
+
+    .info-contacto{display: flex;
+        color: #FCECC9;
+        margin-left: 5rem;
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size:large;
+        width: 60%;
+        height: 100%;
+        grid-area: info;
+        font-family: 'Caveat', cursive;
+
+        .titulo-info-contacto{
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .ig-contacto{
+            color: #FCECC9;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

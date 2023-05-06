@@ -47,10 +47,11 @@
             grid-area: texto;
             height: 80%;
             .texto1 {
-                font-family: 'Ubuntu', sans-serif;
+                font-family:  'Caveat', cursive;
                 font-size: xx-small;
                 height: 40%;
                 .parrafos {
+                    text-decoration: underline;
                     margin-top: 0;
                     font-size: small;
                     font-family: 'Times New Roman', Times, serif;
@@ -58,6 +59,7 @@
             }
         }
         .entrenamiento{
+            
             gap: 1rem;
             padding: 0.5rem;
             grid-area: entrenamiento;
@@ -66,12 +68,15 @@
             align-items: start;
             width: 100%;
         .training{
+            background-color: rgba(168, 166, 166, 0.36);
             width: 100%;
             font-size: small;
-            font-family: 'Sigmar', cursive;
+            font-weight: 600;
+            font-family: 'Ubuntu', sans-serif;
         }
         
-            .act-fisica{gap: 0.5rem;
+            .act-fisica{
+                gap: 0.5rem;
                 width: 100%;
                 h3{font-family: 'Caveat', cursive;
                     font-size: small;
@@ -99,7 +104,7 @@
            
             .titulo-profes {
                 font-size: medium;
-                color: white;
+                color: black;
                 font-weight: bolder;
             }
 
@@ -195,8 +200,8 @@
            
             .presentacion {
                 font-size: small;
-                background-color: #FCECC9;
-                color: #111D4A;
+                background-color:rgba(194, 194, 194, 0.705);
+                color: black;
                 font-weight: bold;
                 background-size: cover;
                 font-family: 'Times New Roman', Times, serif;
@@ -227,7 +232,7 @@
 
         .titulo-contacto {
             display: block;
-            color: #FCECC9;
+            color: black;
             font-size: x-large;
             grid-area: contacto;
             text-align: center;
@@ -275,6 +280,10 @@
         }
 
         .info-contacto {
+            a:hover{
+                color: blue;
+                font-weight: 600;
+            }
             font-size: medium;
             width: 70%;
             justify-content: center;
@@ -296,13 +305,12 @@
         justify-content: space-evenly;
         align-items: center;
         width: 100vw;
-        height: 80%;
 
         
     h1 {
-        font-size: small;
-        color: white;
-        font-weight: bold;
+        font-size: x-small;
+        color: black;
+
     }
     .imagen-logo {
         width: 6rem;
@@ -317,34 +325,74 @@
         }
     }
 
-
-
-
     main {
-        display: flex;
-        flex-direction: column;
-
-
-        .imagen-santi {
-            width: 80%;
-            height: 80%;
-        }
-        aside {
-            height: 100%;
-            .texto1 {
-                font-size: xx-small;
-                background-color: #FCECC9;
-                height: 95%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25% 20% 1fr;
+        grid-template-areas: 
+        "imagen"
+        "texto"
+        "entrenamiento";
         
-            }
-
-    .parrafos {
-        margin-top: 0;
-        font-size: small;
-        font-family: 'Times New Roman', Times, serif;
-    }
+        .contenedor-imagen-santi{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        .imagen-santi {
+            width: 60%;
+            grid-area: imagen;
         }
     }
+        .aside {
+            grid-area: texto;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: start;
+            .texto1 {
+                font-family:  'Caveat', cursive;
+                font-size: xx-small;
+                height: 40%;
+                .parrafos {
+                    text-decoration: underline;
+                    font-size: small;
+                    font-family: 'Caveat', cursive;
+                }
+            }
+        }
+        .entrenamiento{
+            
+            gap: 1rem;
+            padding: 0.5rem;
+            grid-area: entrenamiento;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 100%;
+        .training{
+            background-color: rgba(168, 166, 166, 0.36);
+            width: 100%;
+            font-size: small;
+            font-weight: 600;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+            .act-fisica{
+                gap: 0.5rem;
+                width: 100%;
+                h3{font-family: 'Caveat', cursive;
+                    font-size: small;
+                }
+                p{font-family: 'Ubuntu', sans-serif;
+                    font-weight: 600;
+                    font-size: small;
+                
+                }
+            }
+        }
+    }
+
+
+   
 
 
     /* section profes */
@@ -358,7 +406,7 @@
         .titulos-profes{
             .titulo-profes {
                 font-size: small;
-                color: white;
+                color: black;
                 font-weight: bolder;
             }
             .subtitulo-profes {
@@ -373,10 +421,10 @@
             width: 80%;
             margin: 0;
             h5 {
-                font-size: small;
+                font-size: x-small;
             }
             p {
-                font-size: x-small;
+                font-size: xx-small;
             }
         }
     }
@@ -469,7 +517,7 @@
             .titulo-contacto {
                 display: flex;
                 align-items: center;
-                color: #FCECC9;
+                color: black;
                 font-size: large;
                 grid-area: contacto;
                 justify-content: center;

@@ -8,8 +8,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
 $background: linear-gradient(90deg, rgba(89,189,246,1) 14%, rgba(65,135,188,1) 36%, rgba(39,78,127,1) 56%, rgba(23,42,88,1) 76%, rgba(17,29,74,1) 90%);
 $font-titulos:'Sigmar', cursive;
+
 
 
 @mixin flex-center{

@@ -17,7 +17,7 @@
         z-index: 1;
         justify-content: space-evenly;
         align-items: center;
-       
+        
     
         h1 {
             font-size: medium;
@@ -282,10 +282,16 @@
 
             .form {
                 height: 100%;
-                width: 60%;
+                width: 80%;
                 font-size: medium;
                 font-family: 'Times New Roman', Times, serif;
 
+                input{
+                    width: 80%;
+                }
+                textarea{
+                    width: 80%;
+                }
             }
         }
 
@@ -520,6 +526,7 @@
     /* contacto */
     
     .main-contactos {
+        
         height: 100vh;
         width: 100vw;
         display: grid;
@@ -566,7 +573,7 @@
                 @include flex-center;
                 .form {
                     height: 100%;
-                    width: 70%;
+                    width: 80%;
                     font-size: small;
                     font-family: 'Times New Roman', Times, serif;
             

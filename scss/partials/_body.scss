@@ -5,7 +5,7 @@ body {
     grid-template-columns: 70% 1fr;
     grid-template-rows:20% 1fr 10%;
     grid-template-areas:
-    "header header  "
-    "main main  "
+    "header header"
+    "main main "
     "footer footer "  ;
 }

@@ -359,7 +359,21 @@ grid-area: horarios;
          }
 
     }
-
+    footer{
+            .logos{
+                .logo-ig{
+                    width: 4rem;
+                }
+                .logo-wsp{
+                    width: 4rem;
+                }
+            }
+        .derechos{
+            
+            font-size: x-small;
+        }
+    
+    }
     main {
         height: 100%;
         grid-template-columns: 1fr;

@@ -493,12 +493,16 @@ grid-area: horarios;
 
     /* horarios */
     .main-horarios {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 1fr;
+        grid-template-areas: 
+        "horarios"
+        "turnos";
+        height: 90%;
 
         .contenedor-horarios {
-           
+           justify-content: start;
             .titulo-horarios {
              h2{
                 font-size:large;
@@ -515,7 +519,8 @@ grid-area: horarios;
         }
 
         .contenedor-turnos {
-           
+           display: flex;
+           align-items: start;
             .turnos {
                 font-size: medium;
                 font-weight: bold;
@@ -655,7 +660,7 @@ grid-area: horarios;
         display: grid;
         width: 100%;
         height: 100vh;
-        grid-template-rows:8% 1fr 10%;
+        grid-template-rows:10% 1fr 10%;
         grid-template-columns: none;
         grid-template-areas:
         "header "
@@ -676,7 +681,7 @@ grid-area: horarios;
 
     }
     .imagen-logo {
-        width: 6rem;
+        width: 5rem;
     }
         .dropdown {
             display: block;
@@ -793,9 +798,7 @@ grid-area: horarios;
 
     /* horarios */
     .main-horarios {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+        height: 80%;
 
         .contenedor-horarios{
             .titulo-horarios {
@@ -869,7 +872,7 @@ grid-area: horarios;
         width: 100vw;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 2% 30% 1fr 25%;
+        grid-template-rows: 6% 30% 1fr 25%;
         grid-template-areas:
             "contacto"
             " maps"

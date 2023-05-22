@@ -467,12 +467,21 @@ grid-area: horarios;
             }
         }
 
+
         .contenedor-carousel {
             height: 80%;
             width: 80%;
             @include flex-center;
 .carousel-inner{
     .carousel-item{
+        .carousel-caption{
+            h5 {
+                font-size: small;
+            }
+            p {
+                font-size: small;
+            }
+        }
         img{
             width: 100%;
         }
@@ -578,7 +587,7 @@ grid-area: horarios;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 2% 30% 1fr 25%;
+        grid-template-rows: 5% 30% 1fr 25%;
         grid-template-areas:
             "contacto"
             " maps"
@@ -786,12 +795,19 @@ grid-area: horarios;
             height: 80%;
             width: 80%;
             margin: 0;
+            
+            .carousel-inner{
+        .carousel-item{
+            .carousel-caption{
             h5 {
                 font-size: x-small;
             }
             p {
-                font-size: xx-small;
+                font-size: x-small;
             }
+        }
+        }
+        }
         }
     }
 

@@ -751,6 +751,12 @@ footer .derechos {
     align-items: center;
     justify-content: center;
   }
+  .main-profes .contenedor-carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: small;
+  }
+  .main-profes .contenedor-carousel .carousel-inner .carousel-item .carousel-caption p {
+    font-size: small;
+  }
   .main-profes .contenedor-carousel .carousel-inner .carousel-item img {
     width: 100%;
   }
@@ -825,7 +831,7 @@ footer .derechos {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2% 30% 1fr 25%;
+    grid-template-rows: 5% 30% 1fr 25%;
     grid-template-areas: "contacto" " maps" " form" " info";
   }
   .main-contactos .titulo-contacto {
@@ -996,11 +1002,11 @@ footer .derechos {
     width: 80%;
     margin: 0;
   }
-  .main-profes .contenedor-carousel h5 {
+  .main-profes .contenedor-carousel .carousel-inner .carousel-item .carousel-caption h5 {
     font-size: x-small;
   }
-  .main-profes .contenedor-carousel p {
-    font-size: xx-small;
+  .main-profes .contenedor-carousel .carousel-inner .carousel-item .carousel-caption p {
+    font-size: x-small;
   }
   /* horarios */
   .main-horarios {

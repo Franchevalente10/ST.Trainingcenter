@@ -22,12 +22,24 @@ z-index: 1;
      }
 
      .imagen-logo {
+        padding: 1rem;
         width: 11rem;
          display: flex;
          align-items: start;
          border-radius:50% ;
+         animation-name: logo-giratorio;
+         transition: all 2s;
+         animation-iteration-count: infinite;
+         animation-duration: 10s
         
     
+     }
+     @keyframes logo-giratorio {
+        0%{ rotate: 360deg ;
+        }
+        100%{
+            rotate: 0deg;
+        }
      }
 
      .menu-burguer{

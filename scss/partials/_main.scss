@@ -2,6 +2,8 @@
 //main inicio
 
 main{
+    background-image: url(../img/Fondo\ simple.jpg);
+    background-size:cover;
 grid-area: main;
 @include flex-center;
 width: 100%;
@@ -51,6 +53,7 @@ height: 100%;
         
     }
 .entrenamiento{
+    color:white;
     grid-area: entrenamiento;
     display: flex;
     justify-content: space-around;
@@ -102,7 +105,7 @@ height: 100%;
         font-family: $font-titulos;
        color: black;
         font-size:x-large;
-        font-weight: bolder;
+        
     }
     
     .subtitulo-profes{ font-size:large;
@@ -154,18 +157,17 @@ height: 100%;
 
         .titulo-horarios{
             @include flex-column-center;
-            color:black;
+            color:#909090;
             grid-area: titulo;
             font-size: large;
             font-family: 'Sigmar', cursive;
             
             h2{
-                font-weight: bold;
                 font-size: x-large;
             }
         }
         .loshorarios{
-        color: black;
+            color:#909090;
         width:70% ;
         font-size: large;
         font-family: 'Caveat', cursive;
@@ -183,7 +185,7 @@ height: 100%;
 
     .losturnos{
         color: black;
-        background-color: rgba(194, 194, 194, 0.705);
+        
        
         font-family: 'Caveat', cursive;
         width:90% ;
@@ -195,8 +197,8 @@ height: 100%;
 .foto-aside{
     grid-area: aside;
     img{
-        width: 90%;
-        height:80%;
+        width: 80%;
+        height: 90%;
     }
 }
 
@@ -209,14 +211,14 @@ height: 100%;
         height: 100%;
         width:100%;
         grid-template-columns:60% 1fr ;
-        grid-template-rows: 5% 1fr;
+        grid-template-rows: 7% 1fr;
         grid-template-areas:
         " reglamento reglamento"
         "presentacion orden ";
 
         .reglamento{ text-align: center;
             font-family: 'Sigmar', cursive;
-            color:black;
+            color:#909090;
             font-size: xx-large;
             grid-area: reglamento;
         }
@@ -266,12 +268,13 @@ height: 100%;
     height: 100%;
     width: 100%;
     grid-template-columns: 30% 1fr 1fr ;
-    grid-template-rows:5% 1fr;
+    grid-template-rows:7% 1fr;
     grid-template-areas: 
     "maps contacto info"
     "maps form info";
 
     h2{
+        color:#909090;
         font-family: 'Sigmar', cursive;
         font-size: xx-large;
         text-align: center;

@@ -22,7 +22,7 @@ body {
   width: 100%;
   height: 100vh;
   grid-template-columns: 70% 1fr;
-  grid-template-rows: 20% 1fr 10%;
+  grid-template-rows: 14% 1fr 10%;
   grid-template-areas: "header header" "main main " "footer footer ";
 }
 
@@ -46,10 +46,23 @@ header h1 {
   font-family: "Sigmar", cursive;
 }
 header .imagen-logo {
+  padding: 1rem;
   width: 11rem;
   display: flex;
   align-items: start;
   border-radius: 50%;
+  animation-name: logo-giratorio;
+  transition: all 2s;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+@keyframes logo-giratorio {
+  0% {
+    rotate: 360deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
 }
 header .menu-burguer {
   display: none;
@@ -72,6 +85,8 @@ header nav ul a:hover {
 }
 
 main {
+  background-image: url(../img/Fondo\ simple.jpg);
+  background-size: cover;
   grid-area: main;
   display: flex;
   align-items: center;
@@ -111,6 +126,7 @@ main .aside .texto1 .parrafos {
   font-weight: 600;
 }
 main .entrenamiento {
+  color: white;
   grid-area: entrenamiento;
   display: flex;
   justify-content: space-around;
@@ -152,7 +168,6 @@ main .entrenamiento .act-fisica p {
   font-family: "Sigmar", cursive;
   color: black;
   font-size: x-large;
-  font-weight: bolder;
 }
 .main-profes .titulos-profes .subtitulo-profes {
   font-size: large;
@@ -191,17 +206,16 @@ main .entrenamiento .act-fisica p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: black;
+  color: #909090;
   grid-area: titulo;
   font-size: large;
   font-family: "Sigmar", cursive;
 }
 .main-horarios .contenedor-horarios .titulo-horarios h2 {
-  font-weight: bold;
   font-size: x-large;
 }
 .main-horarios .contenedor-horarios .loshorarios {
-  color: black;
+  color: #909090;
   width: 70%;
   font-size: large;
   font-family: "Caveat", cursive;
@@ -218,7 +232,6 @@ main .entrenamiento .act-fisica p {
 }
 .main-horarios .contenedor-turnos .losturnos {
   color: black;
-  background-color: rgba(194, 194, 194, 0.705);
   font-family: "Caveat", cursive;
   width: 90%;
   font-size: large;
@@ -228,8 +241,8 @@ main .entrenamiento .act-fisica p {
   grid-area: aside;
 }
 .main-horarios .foto-aside img {
-  width: 90%;
-  height: 80%;
+  width: 80%;
+  height: 90%;
 }
 
 .main-acerca {
@@ -237,13 +250,13 @@ main .entrenamiento .act-fisica p {
   height: 100%;
   width: 100%;
   grid-template-columns: 60% 1fr;
-  grid-template-rows: 5% 1fr;
+  grid-template-rows: 7% 1fr;
   grid-template-areas: " reglamento reglamento" "presentacion orden ";
 }
 .main-acerca .reglamento {
   text-align: center;
   font-family: "Sigmar", cursive;
-  color: black;
+  color: #909090;
   font-size: xx-large;
   grid-area: reglamento;
 }
@@ -283,10 +296,11 @@ main .entrenamiento .act-fisica p {
   height: 100%;
   width: 100%;
   grid-template-columns: 30% 1fr 1fr;
-  grid-template-rows: 5% 1fr;
+  grid-template-rows: 7% 1fr;
   grid-template-areas: "maps contacto info" "maps form info";
 }
 .main-contactos h2 {
+  color: #909090;
   font-family: "Sigmar", cursive;
   font-size: xx-large;
   text-align: center;
@@ -392,7 +406,7 @@ footer .derechos {
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 10% 1fr 10%;
+    grid-template-rows: 9% 1fr 10%;
     grid-template-columns: none;
     grid-template-areas: "header " "main " "footer";
   }
@@ -455,7 +469,6 @@ footer .derechos {
     width: 100%;
   }
   main .entrenamiento .training {
-    background-color: rgba(168, 166, 166, 0.36);
     width: 100%;
     font-size: small;
     font-weight: 600;
@@ -491,19 +504,18 @@ footer .derechos {
     padding: 0.5rem;
   }
   .main-profes .contenedor-carousel {
-    height: 50%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .main-profes .contenedor-carousel .carousel-inner .carousel-item img {
     width: 100%;
   }
-  .main-profes .contenedor-carousel h5 {
+  .main-profes .contenedor-carousel .carousel {
+    width: 80%;
+  }
+  .main-profes .contenedor-carousel .carousel .carousel-inner .carousel-item img {
+    width: 100%;
+  }
+  .main-profes .contenedor-carousel .carousel h5 {
     font-size: small;
   }
-  .main-profes .contenedor-carousel p {
+  .main-profes .contenedor-carousel .carousel p {
     font-size: x-small;
   }
   /* horarios */
@@ -518,7 +530,6 @@ footer .derechos {
   }
   .main-horarios .contenedor-horarios .titulo-horarios h2 {
     font-size: large;
-    font-weight: 600;
   }
   .main-horarios .contenedor-horarios .loshorarios {
     font-size: medium;
@@ -526,13 +537,16 @@ footer .derechos {
     font-weight: bold;
   }
   .main-horarios .contenedor-turnos {
+    height: 90%;
     grid-area: turnos;
   }
   .main-horarios .contenedor-turnos .turnos {
+    color: white;
     font-size: medium;
     font-weight: bold;
   }
   .main-horarios .contenedor-turnos .turnos .losturnos {
+    color: white;
     font-size: small;
     font-family: "Times New Roman", Times, serif;
     font-weight: bold;
@@ -549,7 +563,6 @@ footer .derechos {
   }
   .main-acerca .reglamento {
     font-size: x-large;
-    font-weight: bolder;
   }
   .main-acerca .contenedor-presentacion .presentacion {
     font-size: small;
@@ -560,7 +573,9 @@ footer .derechos {
     font-family: "Times New Roman", Times, serif;
   }
   .main-acerca .orden {
-    font-size: small;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
     font-family: "Times New Roman", Times, serif;
   }
   /* contacto */
@@ -574,7 +589,6 @@ footer .derechos {
   }
   .main-contactos .titulo-contacto {
     display: block;
-    color: black;
     font-size: x-large;
     grid-area: contacto;
     text-align: center;
@@ -587,6 +601,8 @@ footer .derechos {
     justify-content: space-evenly;
   }
   .main-contactos .maps p {
+    color: white;
+    font-weight: 600;
     font-size: medium;
     justify-content: center;
     align-items: start;
@@ -594,7 +610,7 @@ footer .derechos {
   }
   .main-contactos .maps iframe {
     height: 100%;
-    width: 30%;
+    width: 50%;
   }
   .main-contactos .form-contacto {
     display: none;
@@ -617,12 +633,17 @@ footer .derechos {
     width: 80%;
   }
   .main-contactos .info-contacto {
+    color: white;
     font-size: medium;
     width: 70%;
     justify-content: center;
     height: 10%;
     gap: 0;
     font-family: "Times New Roman", Times, serif;
+  }
+  .main-contactos .info-contacto a {
+    color: white;
+    font-size: medium;
   }
   .main-contactos .info-contacto a:hover {
     color: blue;
@@ -634,7 +655,7 @@ footer .derechos {
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 10% 1fr 10%;
+    grid-template-rows: 9% 1fr 10%;
     grid-template-columns: none;
     grid-template-areas: "header " "main " "footer";
   }
@@ -730,23 +751,23 @@ footer .derechos {
   .main-profes {
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: 100%;
     display: flex;
   }
   .main-profes .titulos-profes .titulo-profes {
     font-size: medium;
-    color: black;
-    font-weight: bolder;
+    color: white;
   }
   .main-profes .titulos-profes .subtitulo-profes {
+    color: white;
     font-size: medium;
     width: 80%;
     font-weight: 600;
     padding: 0.5rem;
   }
   .main-profes .contenedor-carousel {
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -772,14 +793,13 @@ footer .derechos {
     grid-template-columns: 1fr;
     grid-template-rows: 20% 1fr;
     grid-template-areas: "horarios" "turnos";
-    height: 90%;
+    height: 100%;
   }
   .main-horarios .contenedor-horarios {
     justify-content: start;
   }
   .main-horarios .contenedor-horarios .titulo-horarios h2 {
     font-size: large;
-    font-weight: 600;
   }
   .main-horarios .contenedor-horarios .loshorarios {
     font-size: small;
@@ -791,10 +811,12 @@ footer .derechos {
     align-items: start;
   }
   .main-horarios .contenedor-turnos .turnos {
+    color: white;
     font-size: medium;
     font-weight: bold;
   }
   .main-horarios .contenedor-turnos .turnos .losturnos {
+    color: white;
     font-size: small;
     font-family: "Times New Roman", Times, serif;
     font-weight: bold;
@@ -811,7 +833,6 @@ footer .derechos {
   }
   .main-acerca .reglamento {
     font-size: x-large;
-    font-weight: bolder;
   }
   .main-acerca .contenedor-presentacion .presentacion {
     font-size: small;
@@ -896,7 +917,7 @@ footer .derechos {
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 10% 1fr 10%;
+    grid-template-rows: 7% 1fr 10%;
     grid-template-columns: none;
     grid-template-areas: "header " "main " "footer";
   }
@@ -912,7 +933,7 @@ footer .derechos {
     color: black;
   }
   header .imagen-logo {
-    width: 5rem;
+    width: 6rem;
   }
   header .dropdown {
     display: block;
@@ -921,6 +942,7 @@ footer .derechos {
     display: none;
   }
   main {
+    height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 25% 23% 1fr;
     grid-template-areas: "imagen" "texto" "entrenamiento";
@@ -983,13 +1005,11 @@ footer .derechos {
   .main-profes {
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: 100%;
     display: flex;
   }
   .main-profes .titulos-profes .titulo-profes {
     font-size: small;
-    color: black;
-    font-weight: bolder;
   }
   .main-profes .titulos-profes .subtitulo-profes {
     font-size: small;
@@ -999,7 +1019,7 @@ footer .derechos {
   }
   .main-profes .contenedor-carousel {
     height: 80%;
-    width: 80%;
+    width: 100%;
     margin: 0;
   }
   .main-profes .contenedor-carousel .carousel-inner .carousel-item .carousel-caption h5 {
@@ -1010,16 +1030,18 @@ footer .derechos {
   }
   /* horarios */
   .main-horarios {
-    height: 80%;
+    height: 100%;
   }
   .main-horarios .contenedor-horarios .titulo-horarios {
     font-size: large;
-    font-weight: bold;
   }
   .main-horarios .contenedor-horarios .loshorarios {
     font-size: small;
     font-family: "Times New Roman", Times, serif;
     font-weight: 600;
+  }
+  .main-horarios .contenedor-turnos {
+    height: 100%;
   }
   .main-horarios .contenedor-turnos .turnos {
     font-size: small;
@@ -1027,7 +1049,6 @@ footer .derechos {
   .main-horarios .contenedor-turnos .turnos .losturnos {
     font-size: small;
     font-family: "Times New Roman", Times, serif;
-    font-weight: 600;
   }
   .main-horarios .foto-aside {
     display: none;
@@ -1041,7 +1062,7 @@ footer .derechos {
   }
   .main-acerca .reglamento {
     font-size: medium;
-    font-weight: bolder;
+    font-weight: 100;
   }
   .main-acerca .contenedor-presentacion .presentacion {
     font-size: small;
@@ -1073,7 +1094,7 @@ footer .derechos {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white;
     font-size: large;
     grid-area: contacto;
   }
@@ -1110,7 +1131,7 @@ footer .derechos {
   }
   .main-contactos .info-contacto {
     font-size: small;
-    width: 70%;
+    width: 80%;
     justify-content: center;
     height: 50%;
     gap: 0;

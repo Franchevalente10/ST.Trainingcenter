@@ -130,27 +130,33 @@
                 padding: 0.5rem;
             }
         }
+        .section-cards{ 
+            gap: 4rem; 
+            grid-area: carousel; 
+            @include flex-column-center; 
+            .card{ 
+                width: 60%; 
+                .card-body{ 
+                    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(216,216,216,1) 15%, rgba(133,133,133,1) 60%, rgba(91,91,91,1) 100%); 
+                    h5{ 
+                        font-size: medium; 
+                        font-weight: bolder; 
+                    } 
+                    p{ 
+                        font-family: 'Kanit', sans-serif; 
+                        font-size: small; 
+                    } 
+                } 
+                .card-redes{ 
+                    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(216,216,216,1) 15%, rgba(133,133,133,1) 60%, rgba(91,91,91,1) 100%); 
+                    img{ 
+                        width: 3rem; 
+                    } 
+                } 
+          } 
 
-        .contenedor-carousel {
-            width: 100%;
-           .carousel{ width: 80%;
-
-.carousel-inner{
-    .carousel-item{
-        img{
-            width: 100%;
-        }
-    }
-}
-            h5 {
-                font-size: small;
-            }
-
-            p {
-                font-size: x-small;
-            }
-        }
-    }
+        } 
+       
     }
 
 
@@ -475,35 +481,31 @@ grid-area: horarios;
                 padding: 0.5rem;
             }
         }
-
-
-        .contenedor-carousel {
-            height: 100%;
-            width: 100%;
-            @include flex-center;
-.carousel-inner{
-    .carousel-item{
-        .carousel-caption{
-            h5 {
-                font-size: small;
-            }
-            p {
-                font-size: small;
-            }
-        }
-        img{
-            width: 100%;
-        }
-    }
-}
-            h5 {
-                font-size: small;
-            }
-
-            p {
-                font-size: x-small;
-            }
-        }
+        .section-cards{ 
+            gap: 4rem; 
+            grid-area: carousel; 
+            @include flex-column-center; 
+            .card{ 
+                width: 60%; 
+                .card-body{ 
+                    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(216,216,216,1) 15%, rgba(133,133,133,1) 60%, rgba(91,91,91,1) 100%);
+                    h5{ 
+                     font-size: medium; 
+                      font-weight: bolder; 
+                    } 
+                    p{ 
+                        font-family: 'Kanit', sans-serif; 
+                        font-size: small; 
+                    } 
+                } 
+                .card-redes{ 
+                    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(216,216,216,1) 15%, rgba(133,133,133,1) 60%, rgba(91,91,91,1) 100%); 
+                    img{ 
+                       width: 3rem; 
+                    } 
+                } 
+            } 
+        } 
     }
 
 
@@ -777,11 +779,6 @@ grid-area: horarios;
             }
         }
     }
-
-
-   
-
-
     /* section profes */
 
     .main-profes {
@@ -789,7 +786,6 @@ grid-area: horarios;
         flex-direction: column;
         height: 100%;
         display: flex;
-
         .titulos-profes{
             .titulo-profes {
                 font-size: small;
@@ -802,24 +798,31 @@ grid-area: horarios;
                 padding: 0.5rem;
             }
         }
-        .contenedor-carousel {
-            height: 80%;
-            width: 100%;
-            margin: 0;
-            
-            .carousel-inner{
-        .carousel-item{
-            .carousel-caption{
-            h5 {
-                font-size: x-small;
-            }
-            p {
-                font-size: x-small;
-            }
-        }
-        }
-        }
-        }
+        .section-cards{ 
+            gap: 4rem; 
+            grid-area: carousel; 
+            @include flex-column-center; 
+            .card{ 
+                width: 60%; 
+                .card-body{ 
+                    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(216,216,216,1) 15%, rgba(133,133,133,1) 60%, rgba(91,91,91,1) 100%); 
+                    h5{ 
+                        font-size: medium; 
+                        font-weight: bolder; 
+                    } 
+                    p{ 
+                        font-family: 'Kanit', sans-serif; 
+                        font-size: small; 
+                    } 
+                } 
+                .card-redes{ 
+                    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(216,216,216,1) 15%, rgba(133,133,133,1) 60%, rgba(91,91,91,1) 100%); 
+                    img{ 
+                        width: 2rem; 
+                    } 
+                } 
+            } 
+        } 
     }
 
 

@@ -886,7 +886,7 @@ footer .derechos {
   }
   .main-contactos .titulo-contacto {
     display: block;
-    color: black;
+    color: white;
     font-size: x-large;
     grid-area: contacto;
     text-align: center;

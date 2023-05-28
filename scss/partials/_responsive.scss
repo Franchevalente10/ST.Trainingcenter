@@ -45,23 +45,21 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 20% 1fr;
         grid-template-areas: 
-        "imagen"
-        "texto"
+        "carousel"
+        "aside"
         "entrenamiento";
         
-        .contenedor-imagen-santi{
-            grid-area: imagen;
-            display: flex;
-            justify-content: center;
-        .imagen-santi {
-          
-            width: 30%;
-            
-        }
-    }
+        .contenedor-carousel{
+            width: 100%;
+         grid-area: carousel;
+         @include flex-center;
+         .carousel-inner{
+             width: 60%;
+         }
+         }
         .aside {
            
-            grid-area: texto;
+            grid-area: aside;
             
             .texto1 {
                 font-family: 'Ubuntu', sans-serif;
@@ -391,25 +389,23 @@ grid-area: horarios;
     main {
         height: 100%;
         grid-template-columns: 1fr;
-        grid-template-rows: 30% 20% 1fr;
+        grid-template-rows: 1fr 20% 1fr;
         grid-template-areas: 
-        "imagen"
-        "texto"
+        "carousel"
+        "aside"
         "entrenamiento";
         
-        .contenedor-imagen-santi{
-            grid-area: imagen;
-            display: flex;
-            justify-content: center;
-        .imagen-santi {
-            height: 50%;
-            width: 50%;
-            
-        }
-    }
+        .contenedor-carousel{
+            width: 100%;
+         grid-area: carousel;
+         @include flex-center;
+         .carousel-inner{
+             width: 80%;
+         }
+         }
         .aside {
            
-            grid-area: texto;
+            grid-area: aside;
             
             .texto1 {
                 font-family:  'Caveat', cursive;
@@ -720,20 +716,20 @@ grid-area: horarios;
         grid-template-columns: 1fr;
         grid-template-rows: 25% 23% 1fr;
         grid-template-areas: 
-        "imagen"
-        "texto"
+        "carousel"
+        "aside"
         "entrenamiento";
         
-        .contenedor-imagen-santi{
-            grid-area: imagen;
-            @include flex-center;
-          
-        .imagen-santi {
-         width: 50%;  
-        }
-    }
+        .contenedor-carousel{
+            width: 100%;
+         grid-area: carousel;
+         @include flex-center;
+         .carousel-inner{
+             width: 80%;
+         }
+         }
         .aside {
-            grid-area: texto;
+            grid-area: aside;
             width: 100%;
             display: flex;
             margin-top: 0;

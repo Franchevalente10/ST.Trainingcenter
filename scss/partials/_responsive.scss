@@ -40,6 +40,32 @@
 
     }
 
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        .logos{
+            .logo-ig{
+                width: 4rem;
+            }
+            .logo-wsp{
+                width: 4rem;
+            }
+        }
+
+
+    .derechos{
+        text-align: end;
+        display: flex;
+        
+        font-size: x-small;
+    }
+
+    .nav-footer{
+        display: none;
+    }
+
+}
+
     main {
         height: 100%;
         grid-template-columns: 1fr;
@@ -380,7 +406,11 @@ grid-area: horarios;
                     width: 4rem;
                 }
             }
+
+
         .derechos{
+            text-align: end;
+            display: flex;
             
             font-size: x-small;
         }

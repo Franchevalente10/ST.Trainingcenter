@@ -108,7 +108,7 @@ grid-area: carousel;
 
         .titulo-profes {
             font-family: $font-titulos;
-            color: black;
+            color: white;
             font-size: x-large;
 
         }
@@ -116,7 +116,7 @@ grid-area: carousel;
         .subtitulo-profes {
             font-size: large;
             width: 40%;
-            color: black;
+            color: white;
         }
     }
 
@@ -172,7 +172,7 @@ grid-area: carousel;
 
         .titulo-horarios {
             @include flex-column-center;
-            color: #909090;
+            color: white;
             grid-area: titulo;
             font-size: large;
             font-family: 'Sigmar', cursive;
@@ -183,7 +183,7 @@ grid-area: carousel;
         }
 
         .loshorarios {
-            color: #909090;
+            color: white;
             width: 70%;
             font-size: large;
             font-family: 'Caveat', cursive;

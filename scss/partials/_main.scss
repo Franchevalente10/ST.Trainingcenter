@@ -94,7 +94,8 @@ grid-area: carousel;
 
 .main-profes {
     display: grid;
-
+background-image: url(../img/Fondo\ simple.jpg);
+background-size: auto;
     grid-template-rows: 13rem 1fr;
     grid-template-columns: 100%;
     grid-template-areas:

@@ -253,10 +253,11 @@ background-size: auto;
             color: black;
             background-color: rgb(97, 97, 97);
             font-family: 'Caveat', cursive;
-            width: 90%;
+            width: 95%;
             font-size: medium;
             padding: 1rem;
             border-radius: 5%;
+          
 
             .span-presentacion {
                 font-size: x-large;
@@ -267,14 +268,15 @@ background-size: auto;
 
     .orden {
         grid-area: orden;
-        color: black;
+        color: white;
         font-family: 'Caveat', cursive;
-        width: 80%;
+        width: 100%;
         font-size: medium;
+        @include flex-column-center;
 
         .span-orden {
             font-size: x-large;
-            font-weight: bold;
+         
         }
 
     }

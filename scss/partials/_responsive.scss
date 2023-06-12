@@ -1,10 +1,9 @@
-@media screen and (max-width: 768px) {
+@media screen and (min-width:769px) and (max-width: 950px) {
 
     body {
         display: grid;
-        width: 100%;
-        height: 100vh;
-        grid-template-rows:9% 1fr 10%;
+    
+        grid-template-rows:10% 1fr 10%;
         grid-template-columns: none;
         grid-template-areas:
         "header "
@@ -13,26 +12,21 @@
     }
 
     header {
-
-        position: fixed;
-        z-index: 1;
+        
         justify-content: space-evenly;
         align-items: center;
         
     
-        h1 {
-            font-size: medium;
+          h1 {
             color: black;
-            font-weight: bold;
-
+            font-size: 2.5rem;
+            font-family: 'Sigmar', cursive;
         }
         .dropdown {
            
-            display: block;
-        }
-        nav {
             display: none;
         }
+        
          .imagen-logo {
             width: 7rem;
 
@@ -45,10 +39,10 @@
         flex-direction: column-reverse;
         .logos{
             .logo-ig{
-                width: 4rem;
+                width: 3rem;
             }
             .logo-wsp{
-                width: 4rem;
+                width: 3rem;
             }
         }
 
@@ -143,8 +137,365 @@
            
             .titulo-profes {
                 font-size: medium;
+                color: white;
+                
+            }
+
+            .subtitulo-profes {
+                font-size: medium;
+                width: 80%;
+                font-weight: 600;
+                padding: 0.5rem;
+            }
+        }
+        .section-cards{ 
+            gap: 4rem; 
+            grid-area: carousel; 
+            @include flex-column-center; 
+            .card{ 
+                width: 40%; 
+                .card-body{ 
+                    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(216,216,216,1) 15%, rgba(133,133,133,1) 60%, rgba(91,91,91,1) 100%); 
+                    h5{ 
+                        font-size: medium; 
+                        font-weight: bolder; 
+                    } 
+                    p{ 
+                        font-family: 'Kanit', sans-serif; 
+                        font-size: small; 
+                    } 
+                } 
+                .card-redes{ 
+                    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(216,216,216,1) 15%, rgba(133,133,133,1) 60%, rgba(91,91,91,1) 100%); 
+                    img{ 
+                        width: 3rem; 
+                    } 
+                } 
+          } 
+
+        } 
+       
+    }
+
+
+
+
+    /* horarios */
+    .main-horarios {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: 30% 1fr;
+       grid-template-areas: 
+       "horarios"
+       "turnos";
+
+        .contenedor-horarios {
+grid-area: horarios;
+            .titulo-horarios {
+             h2{
+                font-size:large;
+                
+             }
+            }
+
+            .loshorarios {
+                font-size: medium;
+                font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            }
+        }
+
+        .contenedor-turnos {
+            height: 90%;
+           grid-area: turnos;
+            .turnos {
+                color: white;
+                font-size: medium;
+                font-weight: bold;
+                .losturnos {
+                    color: white;
+                    font-size: small;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-weight: bold;
+                }
+
+            }
+        }
+
+        .foto-aside {
+            display: none;
+        }
+    }
+
+    /* acerca de */
+
+    .main-acerca {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 0.5rem;
+
+        .reglamento {
+            font-size: x-large;
+        }
+
+        .contenedor-presentacion {
+           
+            .presentacion {
+                font-size: small;
+                background-color:rgba(194, 194, 194, 0.705);
                 color: black;
-                font-weight: bolder;
+                font-weight: bold;
+                background-size: cover;
+                font-family: 'Times New Roman', Times, serif;
+
+            }
+        }
+
+        .orden {
+            color: white;
+            font-size: medium;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+    }
+
+    /* contacto */
+
+    .main-contactos {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 20% 1fr 20%;
+        grid-template-areas:
+            "contacto"
+            " maps"
+            " form"
+            " info";
+
+        .titulo-contacto {
+            display: block;
+            font-size: x-large;
+            grid-area: contacto;
+            text-align: center;
+margin-top: 2rem;
+        }
+
+        .maps {
+            grid-area: maps;
+            display: flex;
+            flex-direction: row;
+            font-family: 'Times New Roman', Times, serif;
+            justify-content: space-evenly;
+
+            p {
+                color: white;
+                font-weight: 600;
+                font-size: medium;
+                justify-content: center;
+                align-items: start;
+                font-family: 'Times New Roman', Times, serif;
+
+            }
+
+            iframe {
+                height: 100%;
+                width: 50%;
+
+            }
+        }
+
+        .form-contacto {
+            display: none;
+        }
+
+        .section-formulario {
+            @include flex-center;
+
+            .form {
+                height: 90%;
+                width: 70%;
+                font-size: medium;
+                font-family: 'Times New Roman', Times, serif;
+
+                input{
+                    width: 80%;
+                }
+                textarea{
+                    width: 80%;
+                }
+            }
+        }
+
+        .info-contacto {
+            color: white;
+            a{color: white;
+                font-size: medium;
+            &:hover{
+                color: blue;
+                font-weight: 600;
+            }
+        }
+            font-size: medium;
+            width: 70%;
+            justify-content: center;
+            height: 10%;
+            gap: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-rows:9% 1fr 10%;
+        grid-template-columns: none;
+        grid-template-areas:
+        "header "
+        "main "
+        "footer"  ;
+    }
+
+    header {
+
+       
+        justify-content: space-evenly;
+        align-items: center;
+        
+    
+        h1 {
+            font-size: medium;
+            color: black;
+            font-weight: bold;
+
+        }
+        .dropdown {
+           
+            display: block;
+        }
+        nav {
+            display: none;
+        }
+         .imagen-logo {
+            width: 7rem;
+
+         }
+
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        .logos{
+            .logo-ig{
+                width: 3rem;
+            }
+           
+        }
+
+
+    .derechos{
+        text-align: end;
+        display: flex;
+        
+        font-size: x-small;
+    }
+
+    .nav-footer{
+        display: none;
+    }
+
+}
+
+    main {
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 20% 1fr;
+        grid-template-areas: 
+        "carousel"
+        "aside"
+        "entrenamiento";
+        
+        .contenedor-carousel{
+            width: 100%;
+         grid-area: carousel;
+         @include flex-center;
+         .carousel-inner{
+             width: 60%;
+         }
+         }
+        .aside {
+           
+            grid-area: aside;
+            
+            .texto1 {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: small;
+                height: 40%;
+                .parrafos {
+                    text-decoration: underline;
+                    margin-top: 0;
+                    font-size: small;
+                    font-family: 'Ubuntu', sans-serif;
+                    font-weight: 600;
+                }
+            }
+        }
+        .entrenamiento{
+            height: 100%;   
+            padding: 0.5rem;
+            grid-area: entrenamiento;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 100%;
+        .training{
+            width: 100%;
+            font-size: small;
+            font-weight: 600;
+            font-family: 'Ubuntu', sans-serif;
+            padding: 0.5rem;
+        }
+        
+            .act-fisica{
+                gap: 0.5rem;
+                width: 100%;
+                h3{font-family: 'Caveat', cursive;
+                    font-size: small;
+                }
+                p{font-family: 'Ubuntu', sans-serif;
+                    font-weight: 600;
+                    font-size: small;
+                
+                }
+            }
+        }
+    }
+
+
+
+    /* section profes */
+
+    .main-profes {
+        
+        height: 100%;
+        
+        .titulos-profes {
+           
+            .titulo-profes {
+                font-size: medium;
+                color: white;
+                
             }
 
             .subtitulo-profes {
@@ -362,7 +713,7 @@ grid-area: horarios;
         display: grid;
         width: 100%;
         height: 100vh;
-        grid-template-rows:9% 1fr 10%;
+        grid-template-rows:10% 1fr 10%;
         grid-template-columns: none;
         grid-template-areas:
         "header "
@@ -372,8 +723,7 @@ grid-area: horarios;
 
     header {
 
-        position: fixed;
-        z-index: 1;
+        
         justify-content: space-evenly;
         align-items: center;
         
@@ -381,7 +731,7 @@ grid-area: horarios;
         h1 {
             font-size: medium;
             color: black;
-            font-weight: bold;
+           
 
         }
         .dropdown {
@@ -438,7 +788,7 @@ grid-area: horarios;
             grid-area: aside;
             
             .texto1 {
-                font-family:  'Caveat', cursive;
+                font-family: 'Times New Roman', Times, serif;
                 font-size: xx-small;
                 height: 40%;
                 .parrafos {
@@ -446,6 +796,7 @@ grid-area: horarios;
                     margin-top: 0;
                     font-size: small;
                     font-family: 'Times New Roman', Times, serif;
+
                 }
             }
         }
@@ -708,7 +1059,7 @@ grid-area: horarios;
         display: grid;
         width: 100%;
         height: 100vh;
-        grid-template-rows:7% 1fr 10%;
+        grid-template-rows:9% 1fr 10%;
         grid-template-columns: none;
         grid-template-areas:
         "header "
@@ -716,8 +1067,7 @@ grid-area: horarios;
         "footer"  ;
     }
     header {
-        position: fixed;
-        z-index: 1;
+       
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
@@ -764,7 +1114,7 @@ grid-area: horarios;
             display: flex;
             margin-top: 0;
             .texto1 {
-                font-family: 'Ubuntu', sans-serif;
+                font-family: 'Times New Roman', Times, serif;
                 font-size: xx-small;
                 height: 30%;
                

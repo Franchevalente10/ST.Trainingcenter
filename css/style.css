@@ -20,11 +20,10 @@ html {
 
 body {
   display: grid;
-  width: 100%;
   height: 100vh;
-  grid-template-columns: 70% 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 14% 1fr 10%;
-  grid-template-areas: "header header" "main main " "footer footer ";
+  grid-template-areas: "header" "main " "footer";
 }
 
 header {
@@ -287,7 +286,7 @@ main .entrenamiento .act-fisica p {
   color: black;
   background-color: rgb(97, 97, 97);
   font-family: "Caveat", cursive;
-  width: 90%;
+  width: 95%;
   font-size: medium;
   padding: 1rem;
   border-radius: 5%;
@@ -298,14 +297,17 @@ main .entrenamiento .act-fisica p {
 }
 .main-acerca .orden {
   grid-area: orden;
-  color: black;
+  color: white;
   font-family: "Caveat", cursive;
-  width: 80%;
+  width: 100%;
   font-size: medium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .main-acerca .orden .span-orden {
   font-size: x-large;
-  font-weight: bold;
 }
 
 .main-contactos {
@@ -440,30 +442,23 @@ footer .nav-footer nav ul li a:hover {
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 950px) {
   body {
     display: grid;
-    width: 100%;
-    height: 100vh;
-    grid-template-rows: 9% 1fr 10%;
+    grid-template-rows: 10% 1fr 10%;
     grid-template-columns: none;
     grid-template-areas: "header " "main " "footer";
   }
   header {
-    position: fixed;
-    z-index: 1;
     justify-content: space-evenly;
     align-items: center;
   }
   header h1 {
-    font-size: medium;
     color: black;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: "Sigmar", cursive;
   }
   header .dropdown {
-    display: block;
-  }
-  header nav {
     display: none;
   }
   header .imagen-logo {
@@ -474,10 +469,10 @@ footer .nav-footer nav ul li a:hover {
     flex-direction: column-reverse;
   }
   footer .logos .logo-ig {
-    width: 4rem;
+    width: 3rem;
   }
   footer .logos .logo-wsp {
-    width: 4rem;
+    width: 3rem;
   }
   footer .derechos {
     text-align: end;
@@ -553,8 +548,284 @@ footer .nav-footer nav ul li a:hover {
   }
   .main-profes .titulos-profes .titulo-profes {
     font-size: medium;
-    color: black;
+    color: white;
+  }
+  .main-profes .titulos-profes .subtitulo-profes {
+    font-size: medium;
+    width: 80%;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
+  .main-profes .section-cards {
+    gap: 4rem;
+    grid-area: carousel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main-profes .section-cards .card {
+    width: 40%;
+  }
+  .main-profes .section-cards .card .card-body {
+    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(216, 216, 216) 15%, rgb(133, 133, 133) 60%, rgb(91, 91, 91) 100%);
+  }
+  .main-profes .section-cards .card .card-body h5 {
+    font-size: medium;
     font-weight: bolder;
+  }
+  .main-profes .section-cards .card .card-body p {
+    font-family: "Kanit", sans-serif;
+    font-size: small;
+  }
+  .main-profes .section-cards .card .card-redes {
+    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(216, 216, 216) 15%, rgb(133, 133, 133) 60%, rgb(91, 91, 91) 100%);
+  }
+  .main-profes .section-cards .card .card-redes img {
+    width: 3rem;
+  }
+  /* horarios */
+  .main-horarios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 1fr;
+    grid-template-areas: "horarios" "turnos";
+  }
+  .main-horarios .contenedor-horarios {
+    grid-area: horarios;
+  }
+  .main-horarios .contenedor-horarios .titulo-horarios h2 {
+    font-size: large;
+  }
+  .main-horarios .contenedor-horarios .loshorarios {
+    font-size: medium;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+  }
+  .main-horarios .contenedor-turnos {
+    height: 90%;
+    grid-area: turnos;
+  }
+  .main-horarios .contenedor-turnos .turnos {
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+  }
+  .main-horarios .contenedor-turnos .turnos .losturnos {
+    color: white;
+    font-size: small;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+  }
+  .main-horarios .foto-aside {
+    display: none;
+  }
+  /* acerca de */
+  .main-acerca {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.5rem;
+  }
+  .main-acerca .reglamento {
+    font-size: x-large;
+  }
+  .main-acerca .contenedor-presentacion .presentacion {
+    font-size: small;
+    background-color: rgba(194, 194, 194, 0.705);
+    color: black;
+    font-weight: bold;
+    background-size: cover;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .main-acerca .orden {
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+  }
+  /* contacto */
+  .main-contactos {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5% 20% 1fr 20%;
+    grid-template-areas: "contacto" " maps" " form" " info";
+  }
+  .main-contactos .titulo-contacto {
+    display: block;
+    font-size: x-large;
+    grid-area: contacto;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .main-contactos .maps {
+    grid-area: maps;
+    display: flex;
+    flex-direction: row;
+    font-family: "Times New Roman", Times, serif;
+    justify-content: space-evenly;
+  }
+  .main-contactos .maps p {
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+    justify-content: center;
+    align-items: start;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .main-contactos .maps iframe {
+    height: 100%;
+    width: 50%;
+  }
+  .main-contactos .form-contacto {
+    display: none;
+  }
+  .main-contactos .section-formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-contactos .section-formulario .form {
+    height: 90%;
+    width: 70%;
+    font-size: medium;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .main-contactos .section-formulario .form input {
+    width: 80%;
+  }
+  .main-contactos .section-formulario .form textarea {
+    width: 80%;
+  }
+  .main-contactos .info-contacto {
+    color: white;
+    font-size: medium;
+    width: 70%;
+    justify-content: center;
+    height: 10%;
+    gap: 0;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .main-contactos .info-contacto a {
+    color: white;
+    font-size: medium;
+  }
+  .main-contactos .info-contacto a:hover {
+    color: blue;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 9% 1fr 10%;
+    grid-template-columns: none;
+    grid-template-areas: "header " "main " "footer";
+  }
+  header {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header h1 {
+    font-size: medium;
+    color: black;
+    font-weight: bold;
+  }
+  header .dropdown {
+    display: block;
+  }
+  header nav {
+    display: none;
+  }
+  header .imagen-logo {
+    width: 7rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  footer .logos .logo-ig {
+    width: 3rem;
+  }
+  footer .derechos {
+    text-align: end;
+    display: flex;
+    font-size: x-small;
+  }
+  footer .nav-footer {
+    display: none;
+  }
+  main {
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 20% 1fr;
+    grid-template-areas: "carousel" "aside" "entrenamiento";
+  }
+  main .contenedor-carousel {
+    width: 100%;
+    grid-area: carousel;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .contenedor-carousel .carousel-inner {
+    width: 60%;
+  }
+  main .aside {
+    grid-area: aside;
+  }
+  main .aside .texto1 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: small;
+    height: 40%;
+  }
+  main .aside .texto1 .parrafos {
+    text-decoration: underline;
+    margin-top: 0;
+    font-size: small;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+  }
+  main .entrenamiento {
+    height: 100%;
+    padding: 0.5rem;
+    grid-area: entrenamiento;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+  }
+  main .entrenamiento .training {
+    width: 100%;
+    font-size: small;
+    font-weight: 600;
+    font-family: "Ubuntu", sans-serif;
+    padding: 0.5rem;
+  }
+  main .entrenamiento .act-fisica {
+    gap: 0.5rem;
+    width: 100%;
+  }
+  main .entrenamiento .act-fisica h3 {
+    font-family: "Caveat", cursive;
+    font-size: small;
+  }
+  main .entrenamiento .act-fisica p {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    font-size: small;
+  }
+  /* section profes */
+  .main-profes {
+    height: 100%;
+  }
+  .main-profes .titulos-profes .titulo-profes {
+    font-size: medium;
+    color: white;
   }
   .main-profes .titulos-profes .subtitulo-profes {
     font-size: medium;
@@ -727,20 +998,17 @@ footer .nav-footer nav ul li a:hover {
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 9% 1fr 10%;
+    grid-template-rows: 10% 1fr 10%;
     grid-template-columns: none;
     grid-template-areas: "header " "main " "footer";
   }
   header {
-    position: fixed;
-    z-index: 1;
     justify-content: space-evenly;
     align-items: center;
   }
   header h1 {
     font-size: medium;
     color: black;
-    font-weight: bold;
   }
   header .dropdown {
     display: block;
@@ -782,7 +1050,7 @@ footer .nav-footer nav ul li a:hover {
     grid-area: aside;
   }
   main .aside .texto1 {
-    font-family: "Caveat", cursive;
+    font-family: "Times New Roman", Times, serif;
     font-size: xx-small;
     height: 40%;
   }
@@ -998,13 +1266,11 @@ footer .nav-footer nav ul li a:hover {
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 7% 1fr 10%;
+    grid-template-rows: 9% 1fr 10%;
     grid-template-columns: none;
     grid-template-areas: "header " "main " "footer";
   }
   header {
-    position: fixed;
-    z-index: 1;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
@@ -1045,7 +1311,7 @@ footer .nav-footer nav ul li a:hover {
     margin-top: 0;
   }
   main .aside .texto1 {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: xx-small;
     height: 30%;
   }
